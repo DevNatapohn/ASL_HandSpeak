@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# 01-.py
+#ASL_Project\scripts\collect_landmark_ASL.py
 
 import os
 import cv2

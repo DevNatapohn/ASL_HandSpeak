@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# 03.py
+#ASL_Project\scripts\train_asl_model.py
 
 import pandas as pd # type: ignore
 import pickle

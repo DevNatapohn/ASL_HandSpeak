@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# ASL Inference + Full Draw Utils Style
-# ตัวพัฒนาจาก 04.py
+#ASL_Project\scripts\test_ASL.py
 
 import cv2
 import mediapipe as mp # type: ignore
