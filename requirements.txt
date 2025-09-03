@@ -1,6 +1,6 @@
 mediapipe
 opencv-python
-numpy
+nump
 pandas
 scikit-learn
 pygame
