@@ -47,15 +47,18 @@ pip install -r requirements.txt
 ---
 
 ## 🚀 Usage
-1. Run real-time ASL recognition  
-python scripts/test_ASL.py  
+1. Collect Hand Landmarks : Run the data collection script and press keys A–I, K–Y (static gestures only, excluding J and Z) to save landmarks.
+python scripts/collect_landmark_ASL.py
 
-2. Collect new dataset samples  
-python scripts/collect_dataset.py  
+2. Extract Features : Convert the raw landmarks (XYZ) into numerical features (distances, angles, vectors, etc.) for training.
+python scripts/extract_features.py
 
-3. Train a new model  
-python scripts/train.py  
+3. Train the Model : Train a RandomForest classifier on the extracted features and save the model as .pkl.
+python scripts/train_asl_model.py
 
+4. Test in Real-Time : Use your webcam to perform ASL gestures and see predictions with confidence scores in real-time.
+python scripts/test_ASL.py
+   
 ---
 
 ## 🧠 Model
