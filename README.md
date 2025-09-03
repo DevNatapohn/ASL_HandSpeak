@@ -12,24 +12,22 @@ Users can collect their own dataset, train models, and run live ASL recognition 
 
 ```bash
 ASL_HandSpeak/
-│── core/                     # Core modules for processing and utilities
-│   ├── draw_utils.py         # Drawing landmarks and skeleton visualization
-│   ├── hand_utils.py         # Hand detection & coordinate calculation helpers
-│   ├── logger.py             # Logging/exporting data into CSV
-│   └── preprocess.py         # Data preprocessing before feeding into the model
+├── 📁 data/ – stores raw and processed datasets
+│ ├── asl_landmarks_xyz.csv – raw landmarks (X, Y, Z) collected from Mediapipe
+│ └── asl_features.csv – extracted mathematical features used for training
 │
-│── model/                    # Trained models and dataset storage
-│   ├── asl_model.pkl         # Pre-trained ASL model (pickle format)
-│   └── dataset/              # Dataset for training/testing
+├── 📁 model/ – trained machine learning models
+│ └── asl_model.pkl – RandomForest + Scaler model saved with pickle
 │
-│── scripts/                  # Main scripts
-│   ├── train.py              # Train a new model
-│   ├── test_ASL.py           # Run real-time ASL recognition (webcam)
-│   └── collect_dataset.py    # Collect hand sign data to build dataset
+├── 📁 scripts/ – main project scripts
+│ ├── collect_landmark_ASL.py – collect hand landmarks from webcam and save to CSV
+│ ├── extract_features.py – extract features (distances, angles, vectors, etc.) from landmarks
+│ ├── train_asl_model.py – train RandomForest model and save as .pkl
+│ └── test_ASL.py – real-time webcam inference with prediction display
 │
-│── requirements.txt          # Python dependencies
-│── .gitignore                # Ignored files for Git
-│── README.md                 # Project documentation
+├── 📁 sounds/ – reserved for audio feedback/alerts
+│
+└── requirements.txt – dependencies (OpenCV, Mediapipe, scikit-learn, etc.)
 ```
 ---
 
